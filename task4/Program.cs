@@ -2,16 +2,16 @@
 //а на выходе показывает все чётные числа от 1 до N.
 
 Console.Write("Введите число: ");
-string paramString = Console.ReadLine();
-int paramInt1 = int.Parse(paramString);
-int paramInt2 = (paramInt1-paramInt1) + 1;
-Console.Write($"{paramInt1} -> ");
+string number = Console.ReadLine();
+int numberInt = int.Parse(number);
+int i = 1;
 
-while(paramInt2 < paramInt1)
+while(i <= numberInt)
 
 {
-    Console.Write($"{paramInt2}, ");
-    paramInt2 = paramInt2 + 1;
-
+    if (i % 2 == 0)
+    {
+        Console.Write($"{i} ");
+    }
+    i++;
 }
-Console.Write($"{paramInt1}");
